@@ -62,6 +62,9 @@ nvim
 :PackerCompile
 :PackerInstall
 :PackerUpdate
+
+:MasonInstall rust-analyzer codelldb
+:Mason
 ```
 
 build the fzf finder
