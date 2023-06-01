@@ -104,7 +104,8 @@ which_key.register({
         D = { "<cmd>Telescope lsp_declarations<CR>", "LSP Declarations" },
         I = { "<cmd>Telescope lsp_implementations<CR>", "LSP Implementations" },
         r = { "<cmd>Telescope lsp_references<CR>", "LSP References" },
-    }
+    },
+    ["<F4>"] = { "<cmd>ClangdSwitchSourceHeader<CR>", "LSP Switch Source/Header" },
 },
 {
   mode = "n", -- NORMAL mode
