@@ -51,6 +51,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 ```
 mkdir -p ~/.config
 rsync -crvl config/ ~/.config/
+# Optionally un-comment the line at the top of the ~/.config/nvim/init.lua to source the ~/.vimrc
 ```
 
 # Prepare

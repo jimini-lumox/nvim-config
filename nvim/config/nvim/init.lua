@@ -1,4 +1,5 @@
-
+--vim.cmd("source /home/user/.vimrc")
+--
 --vim.g["packpath"] = "/home/user/.local/share/nvim"
 vim.cmd("let mapleader = ','")
 vim.cmd("set mouse=")
