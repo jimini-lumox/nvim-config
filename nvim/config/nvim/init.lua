@@ -1,4 +1,4 @@
---vim.cmd("source /home/user/.vimrc")
+vim.cmd("source $HOME/.vimrc")
 --
 --vim.g["packpath"] = "/home/user/.local/share/nvim"
 vim.cmd("let mapleader = ','")

@@ -15,7 +15,8 @@ rt.setup({
 })
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
+lspconfig.jedi_language_server.setup {}
+--lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.cmake.setup {}
 --lspconfig.clangd.setup {}

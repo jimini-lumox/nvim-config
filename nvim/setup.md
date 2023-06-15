@@ -64,7 +64,10 @@ nvim
 :PackerInstall
 :PackerUpdate
 
+# For rust
 :MasonInstall rust-analyzer codelldb
+# For python
+:MasonInstall jedi-language-server
 :Mason
 ```
 
