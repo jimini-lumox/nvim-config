@@ -2,7 +2,7 @@
 ```
 mkdir -p build/Release
 cmake -S . -B build/Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release .
-ln -fs build/$type/compile_commands.json .
+ln -fs build/Release/compile_commands.json .
 ```
 
 # Pointing to clang+llvm distro
@@ -15,5 +15,5 @@ mkdir -p build/Release
     -DCMAKE_C_COMPILER=clang \
     .
 )
-ln -fs build/$type/compile_commands.json .
+ln -fs build/Release/compile_commands.json .
 ```
