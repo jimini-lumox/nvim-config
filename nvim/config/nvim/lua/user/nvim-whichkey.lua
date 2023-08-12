@@ -107,6 +107,8 @@ which_key.register({
         r = { "<cmd>Telescope lsp_references<CR>", "LSP References" },
     },
     ["<F4>"] = { "<cmd>ClangdSwitchSourceHeader<CR>", "LSP Switch Source/Header" },
+    ["<F3>"] = { "<cmd>vert res +20<CR>", "Increase Width by 20" },
+    ["<F2>"] = { "<cmd>vert res -20<CR>", "Decrease Width by 20" },
 },
 {
   mode = "n", -- NORMAL mode
