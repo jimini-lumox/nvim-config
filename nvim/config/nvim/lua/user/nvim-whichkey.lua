@@ -73,6 +73,13 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
+  S = {
+    name = "Session",
+    S = { "<cmd>lua require('auto-session.session-lens').search_session()<CR>", "Search Sessions" },
+    r = { "<cmd>SessionRestore<cr>", "Session Restore" },
+    s = { "<cmd>SessionSave<cr>", "Session Save" },
+    d = { "<cmd>SessionDelete<cr>", "Delete Session" },
+  },
 
   f = {
     name = "Find",
