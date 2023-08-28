@@ -67,7 +67,7 @@ nvim
 # For rust
 :MasonInstall rust-analyzer codelldb
 # For python
-:MasonInstall jedi-language-server
+:MasonInstall ruff-lsp
 :Mason
 ```
 
