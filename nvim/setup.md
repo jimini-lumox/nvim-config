@@ -3,10 +3,15 @@ Clangd:
 mkdir -p ~/packages/
 cd ~/packages
 
-wget --no-check-certificate https://github.com/clangd/clangd/releases/download/16.0.2/clangd-linux-16.0.2.zip
-wget --no-check-certificate https://github.com/clangd/clangd/releases/download/16.0.2/clangd_indexing_tools-linux-16.0.2.zip
+wget https://github.com/clangd/clangd/releases/download/16.0.2/clangd-linux-16.0.2.zip
+wget https://github.com/clangd/clangd/releases/download/16.0.2/clangd_indexing_tools-linux-16.0.2.zip
 unzip clangd_indexing_tools-linux-16.0.2.zip
 unzip -o clangd-linux-16.0.2.zip
+```
+
+Rust:
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 Fonts:
@@ -23,12 +28,12 @@ unzip -d ~/.local/share/fonts/ BitstreamVeraSansMono.zip
 fc-cache -f -v
 ```
 
-TODO get & install nvim-linux64-tar.gz from its repo
-
 ```sh
 mkdir -p ~/packages/
 cd ~/packages
-wget --no-check-certificate https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+# Get v0.9.1 - note that nightly started having issues with Telescope windows not showing 
+wget https://github.com/neovim/neovim/releases/download/v0.9.1/nvim-linux64.tar.gz
+##wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 tar xzf nvim-linux64.tar.gz -C ~/
 rsync -crvl ~/nvim-linux64/ ~/.local/
 # Add ~/.local/bin to ~/.bashrc
@@ -37,7 +42,7 @@ rsync -crvl ~/nvim-linux64/ ~/.local/
 
 ```sh
 sudo apt-get install ripgrep
-# or: wget --no-check-certificate https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
+# or: wget https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
 tar xzf ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
 cp ripgrep-13.0.0-x86_64-unknown-linux-musl/rg ~/.local/bin/
 ```
@@ -66,7 +71,7 @@ nvim
 
 # For rust
 :MasonInstall rust-analyzer codelldb
-# For python
+# For python (requires python3-venv system package)
 :MasonInstall ruff-lsp
 :Mason
 ```
