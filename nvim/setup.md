@@ -14,6 +14,11 @@ Rust:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+Python:
+```
+# Get the jedi-language-server
+```
+
 Fonts:
 ```sh
 mkdir -p ~/.local/share/fonts
@@ -72,7 +77,7 @@ nvim
 # For rust
 :MasonInstall rust-analyzer codelldb
 # For python (requires python3-venv system package)
-:MasonInstall ruff-lsp
+:MasonInstall ruff-lsp jedi-language-server
 :Mason
 ```
 
