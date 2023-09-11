@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
   	use 'williamboman/mason-lspconfig.nvim'
 
   	-- Post-install/update hook with neovim command
-  	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  	use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.1', run = ':TSUpdate' }
 
   	use 'ryanoasis/vim-devicons'
 
