@@ -3,10 +3,14 @@ Clangd:
 mkdir -p ~/packages/
 cd ~/packages
 
-wget https://github.com/clangd/clangd/releases/download/16.0.2/clangd-linux-16.0.2.zip
-wget https://github.com/clangd/clangd/releases/download/16.0.2/clangd_indexing_tools-linux-16.0.2.zip
-unzip clangd_indexing_tools-linux-16.0.2.zip
-unzip -o clangd-linux-16.0.2.zip
+# If unable to install clang using system packages, can just install locally
+wget https://github.com/clangd/clangd/releases/download/18.1.3/clangd-linux-18.1.3.zip
+wget https://github.com/clangd/clangd/releases/download/18.1.3/clangd_indexing_tools-linux-18.1.3.zip
+unzip clangd_indexing_tools-linux-18.1.3.zip
+unzip -o clangd-linux-18.1.3.zip
+# Copy into ~/.local/{bin,lib}
+mkdir -p ~/.local/
+rsync -crvl clangd-linux_18.1.3/* $HOME/.local/
 ```
 
 Rust:
@@ -22,9 +26,10 @@ Python:
 Fonts:
 ```sh
 mkdir -p ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/IBMPlexMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/DejaVuSansMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/BitstreamVeraSansMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IBMPlexMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/DejaVuSansMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/BitstreamVeraSansMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip
 
 unzip -d ~/.local/share/fonts/ IBMPlexMono.zip
 unzip -d ~/.local/share/fonts/ DejaVuSansMono.zip

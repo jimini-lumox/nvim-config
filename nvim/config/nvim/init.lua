@@ -3,6 +3,7 @@ vim.cmd("source $HOME/.vimrc")
 --vim.g["packpath"] = "/home/user/.local/share/nvim"
 vim.cmd("let mapleader = ','")
 vim.cmd("set mouse=")
+vim.cmd("set formatoptions-=cro")
 
 -- nvim-tree
 -- disable netrw at the very start of your init.lua (strongly advised)
