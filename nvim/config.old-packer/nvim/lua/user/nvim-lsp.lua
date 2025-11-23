@@ -17,7 +17,8 @@ rt.setup({
 local lspconfig = require('lspconfig')
 lspconfig.jedi_language_server.setup {}
 --lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
+--lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 lspconfig.cmake.setup {}
 --lspconfig.clangd.setup {}
 lspconfig.clangd.setup {
@@ -33,7 +34,8 @@ lspconfig.clangd.setup {
 -- Configure `ruff-lsp`.
 -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff_lsp
 -- For the default config, along with instructions on how to customize the settings
-lspconfig.ruff_lsp.setup {
+--lspconfig.ruff_lsp.setup {
+lspconfig.ruff.setup {
     on_attach = function(client, bufnr)
         client.server_capabilities.hoverProvider = false
     end,

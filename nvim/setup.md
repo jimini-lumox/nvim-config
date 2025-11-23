@@ -4,13 +4,13 @@ mkdir -p ~/packages/
 cd ~/packages
 
 # If unable to install clang using system packages, can just install locally
-wget https://github.com/clangd/clangd/releases/download/18.1.3/clangd-linux-18.1.3.zip
-wget https://github.com/clangd/clangd/releases/download/18.1.3/clangd_indexing_tools-linux-18.1.3.zip
-unzip clangd_indexing_tools-linux-18.1.3.zip
-unzip -o clangd-linux-18.1.3.zip
+wget https://github.com/clangd/clangd/releases/download/21.1.0/clangd-linux-21.1.0.zip
+wget https://github.com/clangd/clangd/releases/download/21.1.0/clangd_indexing_tools-linux-21.1.0.zip
+unzip clangd_indexing_tools-linux-21.1.0.zip
+unzip -o clangd-linux-21.1.0.zip
 # Copy into ~/.local/{bin,lib}
 mkdir -p ~/.local/
-rsync -crvl clangd-linux_18.1.3/* $HOME/.local/
+rsync -crvl clangd-linux_21.1.0/* $HOME/.local/
 ```
 
 Rust:
@@ -41,21 +41,44 @@ fc-cache -f -v
 ```sh
 mkdir -p ~/packages/
 cd ~/packages
-# Get v0.9.1 - note that nightly started having issues with Telescope windows not showing 
-wget https://github.com/neovim/neovim/releases/download/v0.9.1/nvim-linux64.tar.gz
-##wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-tar xzf nvim-linux64.tar.gz -C ~/
-rsync -crvl ~/nvim-linux64/ ~/.local/
+wget https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz
+tar xzf nvim-linux-x86_64.tar.gz -C ~/
+rsync -crvl ~/nvim-linux-x86_64/ ~/.local/
 # Add ~/.local/bin to ~/.bashrc
 ## export PATH="$HOME/.local/bin:$PATH"
 ```
 
 ```sh
 sudo apt-get install ripgrep
-# or: wget https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
-tar xzf ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
-cp ripgrep-13.0.0-x86_64-unknown-linux-musl/rg ~/.local/bin/
+# or: wget https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz
+tar xzf ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz
+cp ripgrep-15.1.0-x86_64-unknown-linux-musl/rg ~/.local/bin/
 ```
+
+## NVIM setup using 'Lazy'
+based on: https://lazy.folke.io/installation
+```sh
+mkdir -p ~/.config
+rsync -crvl config-lazy/ ~/.config/
+```
+
+Remove any old nvim share files:
+```sh
+rm -rf ~/.local/share/nvim
+```
+
+Maybe remove the old lock file
+```sh
+rm -f ~/.config/nvim/lazy-lock.json
+```
+
+Run nvim and it should retrieve everything required
+```sh
+nvim
+```
+
+
+#--- OLD nvim Packer Configuration
 
 ```sh
 mkdir -p ~/.local/share/nvim/site/pack/packer/start
