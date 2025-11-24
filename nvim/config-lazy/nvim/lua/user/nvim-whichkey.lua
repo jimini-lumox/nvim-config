@@ -8,7 +8,7 @@ which_key.add({
     { "<leader>SS", "<cmd>lua require('auto-session.session-lens').search_session()<CR>", desc = "Search Sessions", nowait = true, remap = false },
     { "<leader>Sd", "<cmd>SessionDelete<cr>", desc = "Delete Session", nowait = true, remap = false },
     { "<leader>Sr", "<cmd>SessionRestore<cr>", desc = "Session Restore", nowait = true, remap = false },
-    { "<leader>Ss", "<cmd>SessionSave<cr>", desc = "Session Save", nowait = true, remap = false },
+    { "<leader>Ss", "<cmd>AutoSession save<cr>", desc = "Session Save", nowait = true, remap = false },
     { "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Buffers", nowait = true, remap = false },
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explorer", nowait = true, remap = false },
     { "<leader>f", group = "Find", nowait = true, remap = false },
