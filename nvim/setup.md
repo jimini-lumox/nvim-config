@@ -76,6 +76,10 @@ Run nvim and it should retrieve everything required
 ```sh
 nvim
 ```
+Ensure sync performed. May be required for 'leap' plugin
+```sh
+:Lazy sync
+```
 
 
 #--- OLD nvim Packer Configuration
@@ -106,6 +110,8 @@ nvim
 :MasonInstall rust-analyzer codelldb
 # For python (requires python3-venv system package)
 :MasonInstall ruff-lsp jedi-language-server
+# shell
+:MasonInstall bash-language-server shellcheck shfmt
 :Mason
 ```
 
